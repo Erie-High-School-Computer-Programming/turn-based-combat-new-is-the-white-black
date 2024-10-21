@@ -1,9 +1,13 @@
 class Player:
-    def __init__(self):
+    def __init__(self, name, attack, defense, health_stat):
         """This method initializes the character
         It should give the character a name, attack, defense, and health stat
         It should also give the character a movelist"""
-        pass
+        self.name = name
+        self.attack = attack
+        self.defense = defense
+        self.health_stat = health_stat
+        
 
     def attack(self, move, target):
         """This method should allow the character to attack another character using the 
