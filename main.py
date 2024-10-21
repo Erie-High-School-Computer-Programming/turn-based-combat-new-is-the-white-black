@@ -19,6 +19,8 @@ import pygame
 
 # The game should have a way to exit the game.
 
+from player import Player
+
 class Game:
     def __init__(self):
         """Initializes the game,
