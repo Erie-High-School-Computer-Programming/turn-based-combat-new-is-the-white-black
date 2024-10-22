@@ -11,7 +11,7 @@ class Dog:
         target.hp -= 10
 
 luna = Dog("Luna", 4)
-print(luna.age)
+print(luna.age) 
 luna.birthday()
 print(luna.age)
 

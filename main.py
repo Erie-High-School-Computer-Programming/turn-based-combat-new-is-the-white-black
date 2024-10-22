@@ -22,7 +22,7 @@ import sys
 from player import Player
 
 class Game:
-    def __init__(self, name):
+    def __init__(self, name, strength):
         """Initializes the game,
         It should give the game a list of at least 4 characters to choose from
         It should also give the game a list of moves for each character
@@ -33,11 +33,11 @@ class Game:
         print("Hello and welcome")
         
         self.name = name
+        self.strength = strength
         self.hp = 100
 
         self.player_turn = True # False will mean the computers turn
-        print(self.current_turn)
-        
+        #print(self.current_turn)
 
     def turn(self, current_turn):
         """This method should show the current health of both players, 
@@ -48,7 +48,7 @@ class Game:
     def check_winner(self):
         """This method should check if either player's health has reached 0
         If a player's health has reached 0, it should display the winner"""
-         if player.health <= 0:
+        if player.health <= 0:
             check_winner()
 
     def restart(self):
@@ -58,6 +58,8 @@ class Game:
     def exit(self):
         """This method should allow the player to exit the game"""
         sys.exit()
+
+puppaydog = Game("Puppay", 1203)
 
     
 def main():
