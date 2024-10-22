@@ -16,6 +16,6 @@ class Player:
 
     def display_stats(self):
         """This method should display the current health of the character"""
-        pass+
+        pass
 
 
