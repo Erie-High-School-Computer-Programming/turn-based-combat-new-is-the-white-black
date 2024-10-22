@@ -22,7 +22,7 @@ import sys
 from player import Player
 
 class Game:
-    def __init__(self):
+    def __init__(self, name):
         """Initializes the game,
         It should give the game a list of at least 4 characters to choose from
         It should also give the game a list of moves for each character
@@ -30,9 +30,14 @@ class Game:
         and allow them to select a character,
         then have the computer choose a character at random
         It should randomly select a player to go first"""
-        self.player_turn = True # False will mean the computers turn
         print("Hello and welcome")
+        
+        self.name = name
+        self.hp = 100
+
+        self.player_turn = True # False will mean the computers turn
         print(self.current_turn)
+        
 
     def turn(self, current_turn):
         """This method should show the current health of both players, 
@@ -48,7 +53,7 @@ class Game:
 
     def restart(self):
         """This method should allow the player to restart the game"""
-        def player.
+        
 
     def exit(self):
         """This method should allow the player to exit the game"""
