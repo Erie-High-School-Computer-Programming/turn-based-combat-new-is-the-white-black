@@ -43,11 +43,12 @@ class Game:
     def check_winner(self):
         """This method should check if either player's health has reached 0
         If a player's health has reached 0, it should display the winner"""
-        pass
+         if player.health <= 0:
+            check_winner()
 
     def restart(self):
         """This method should allow the player to restart the game"""
-        pass
+        def player.
 
     def exit(self):
         """This method should allow the player to exit the game"""
