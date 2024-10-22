@@ -18,7 +18,7 @@ import pygame
 # The game should have a way to restart the game.
 
 # The game should have a way to exit the game.
-
+import sys
 from player import Player
 
 class Game:
@@ -52,7 +52,7 @@ class Game:
 
     def exit(self):
         """This method should allow the player to exit the game"""
-        pass
+        sys.exit()
 
     
 def main():
