@@ -16,10 +16,10 @@ class Player:
         move_list = {"sugodogothingamagiga": {"damage": 150,
                                             "accuracy": 50},
                                             "superman-punch": 200,
-                                            "Tornadotwisty": 400},
+                                            "Tornadotwisty": 400}
 
     def display_stats(self):
         """This method should display the current health of the character"""
-        pass
+        print(self.hp)
 
 
