@@ -17,8 +17,6 @@ class Player:
                                             "accuracy": 50},
                                             "superman-punch": 200,
                                             "Tornadotwisty": 400},
-    
-        puppaydog.hp -= move_list["superman-punch"]["Tornadotwisty"]
 
     def display_stats(self):
         """This method should display the current health of the character"""
