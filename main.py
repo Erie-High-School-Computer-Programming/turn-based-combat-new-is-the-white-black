@@ -19,6 +19,7 @@ import pygame
 
 # The game should have a way to exit the game.
 import sys
+import random
 from player import Player
 
 class Game:
@@ -31,7 +32,7 @@ class Game:
         then have the computer choose a character at random
         It should randomly select a player to go first"""
         print("Hello and welcome")
-        #puppaydog = Player("Puppay", "lick", "block", )
+        puppaydog = Player("Puppay", "Tornadotwisty", "PuppayDog Eyes", 100, move_list)
         
 
         self.player_turn = True # False will mean the computers turn
@@ -41,6 +42,18 @@ class Game:
         """This method should show the current health of both players, 
         and allow the player to select a move to use on the opponent
         If it is the computer player's turn, it should select a move at random"""
+        if self.player_turn:
+            move = input("Pick your attack")
+            if move == "quit":
+                self.exit()
+            #else:
+                #player.attack(computer)
+
+        else:
+            #move = random.choice(self.computer.movelist) or movelist.kes() if dict
+            #computer.attack(player)
+            pass
+
         self.player_turn = not self.player_turn
 
     def check_winner(self):
@@ -58,9 +71,28 @@ class Game:
         sys.exit()
 
 
+    def run(self):
+        self.player_turn = random.choice(True, False)
+        player_choice = input("Choose your character!")
+        #Create player object Here
+        #Choose computer character
+        self.playing = True
+        while self.playing
+        while True:
+            self.turn()
+            self.check_winner()
+       
+
+
 
     
 def main():
+    game = Game()
+    game.run()
+
+
+
+#This calls the main function 
     game = Game()
     game.turn(1)
     game.check_winner()
