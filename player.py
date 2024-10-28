@@ -13,14 +13,13 @@ class Player:
     def attack(self, move, target):
         """This method should allow the character to attack another character using the 
         selected move. The move should deal damage to the target character"""
-        move_list = {"sugodogothingamagiga": {"damage": 150,
-                                            "accuracy": 50},
-                                            "superman-punch": 200,
-                                            "Tornadotwisty": 400}
+        pass
 
     def display_stats(self):
         """This method should display the current health of the character"""
+        print(self.name)
         print(self.hp)
+        
 
 
 
