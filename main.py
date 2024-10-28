@@ -32,23 +32,8 @@ class Game:
         then have the computer choose a character at random
         It should randomly select a player to go first"""
         print("Hello and welcome")
-<<<<<<< HEAD
-        puppaydog = Player("Puppay", "Tornadotwisty", "PuppayDog Eyes", 100, move_list = 
-        {
-            "Puppay": {"damage": 150, "accuracy": 50},
-            "Tornadotwisty": {"damage": 350, "accuracy": 20},
-            "PuppayDog Eyes": {"damage": 50, "accuracy": 90}
-        })
-        puppaycat = player ("cat", "the-wip", "kungfu", 100, move_list =
-        {
-            "cat": {"damage": 130, "accuracy": 65 },
-            "The-wip" {"damage": 370, "accuracy": 7}
-            "kungfu" {"damage": 75, "accuracy: 80"} 
-        })
-=======
         puppaydog = Player("Puppay", "Tornadotwisty", "PuppayDog Eyes", 100, move_list())
         
->>>>>>> ba6f53b (fscfaseuidfhuawuiaawdbhyiawdfsefaefbhuawwdhdastydvaedgaweg78qwhrfebqvsqwafydawetyfbsefhaedgvawysdhbaweuifh)
 
         self.player_turn = True # False will mean the computers turn
         #print(self.current_turn)
