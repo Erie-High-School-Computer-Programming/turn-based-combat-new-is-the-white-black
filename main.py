@@ -45,15 +45,18 @@ class Game:
             "kungfu": {"damage": 75, "accuracy": 80}
         })
  
-
-        choice = input("Which player would you like to be? puppaydog (a) or kittaycat (b) >>")
-        if choice == "a":
-            self.player = puppaydog
-        elif choice == "b": 
-            self.player = kittaycat
-        else: 
-            print("Invalid response. Please pick a or b.")
+        choosing = True
+        while choosing:
             choice = input("Which player would you like to be? puppaydog (a) or kittaycat (b) >>")
+            if choice == "a":
+                self.player = puppaydog
+                choosing = False
+            elif choice == "b": 
+                self.player = kittaycat
+                choosing = False
+            else: 
+                print("Invalid response. Please pick a or b.")
+            
 
         self.player_turn = True # False will mean the computers turn
         #print(self.current_turn)
@@ -93,7 +96,7 @@ class Game:
  
  
     def run(self):
-        self.player_turn = random.choice(True, False)
+        self.player_turn = random.choice([True, False])
         player_choice = input("Choose your character!")
         #Create player object Here
         #Choose computer character
