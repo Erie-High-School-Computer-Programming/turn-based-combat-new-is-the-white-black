@@ -19,8 +19,5 @@ class Player:
         """This method should display the current health of the character"""
         print(self.name)
         print(self.hp)
-        
-
-
 
 
