@@ -34,11 +34,16 @@ class Game:
         print("Hello and welcome")
         puppaydog = Player("Puppay", "Tornadotwisty", "PuppayDog Eyes", 100, move_list = 
         {
-            "sugodogothingamagiga": {"damage": 150, "accuracy": 50},
-            "superman-punch": {"damage": 350, "accuracy": 20},
-            "Tornadotwisty": {"damage": 50, "accuracy": 90}
+            "Puppay": {"damage": 150, "accuracy": 50},
+            "Tornadotwisty": {"damage": 350, "accuracy": 20},
+            "PuppayDog Eyes": {"damage": 50, "accuracy": 90}
         })
-        
+        puppaycat = player ("cat", "the-wip", "kungfu", 100, move_list =
+        {
+            "cat": {"damage": 130, "accuracy": 65 },
+            "The-wip" {"damage": 370, "accuracy": 7}
+            "kungfu" {"damage": 75, "accuracy: 80"} 
+        })
 
         self.player_turn = True # False will mean the computers turn
         #print(self.current_turn)
@@ -69,6 +74,7 @@ class Game:
 
     def restart(self):
         """This method should allow the player to restart the game"""
+        
         
 
     def exit(self):
