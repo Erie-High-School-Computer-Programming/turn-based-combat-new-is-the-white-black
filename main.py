@@ -1,4 +1,3 @@
-import pygame
 # Create a game that allows players to choose between multiple characters
 # and fight against each other. The game should have a simple combat system
 # where characters can deal damage to each other. The game should also have
@@ -69,8 +68,10 @@ class Game:
             move = input("Pick your attack")
             if move == "quit":
                 self.exit()
-            else:
-                player.attack(computer)
+            elif move == "r":
+                self.playing = False
+            #else:
+                #player.attack(computer)
  
         else:
             #move = random.choice(self.computer.movelist) or movelist.kes() if dict
@@ -111,8 +112,10 @@ class Game:
  
    
 def main():
-    game = Game()
-    game.run()
+    playing = True
+    while playing:
+        game = Game()
+        game.run()
  
  
  
