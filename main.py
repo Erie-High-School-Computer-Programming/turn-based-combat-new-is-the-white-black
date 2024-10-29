@@ -58,7 +58,14 @@ class Game:
             
 
         self.player_turn = True # False will mean the computers turn
-        #print(self.current_turn)
+        print(self.current_turn)
+
+        if self.player == puppaydog:
+            computer = kittaycat
+        elif self.player == kittaycat:
+            computer = puppaydog
+        else: 
+            print("Error")
  
     def turn(self, current_turn):
         """This method should show the current health of both players,
@@ -83,13 +90,7 @@ class Game:
     def check_winner(self):
         """This method should check if either player's health has reached 0
         If a player's health has reached 0, it should display the winner"""
-        if player.health <= 0:
-            check_winner()
- 
-    def restart(self):
-        """This method should allow the player to restart the game"""
         pass
-       
  
     def exit(self):
         """This method should allow the player to exit the game"""
@@ -98,9 +99,6 @@ class Game:
  
     def run(self):
         self.player_turn = random.choice([True, False])
-        player_choice = input("Choose your character!")
-        #Create player object Here
-        #Choose computer character
         self.playing = True
         while self.playing:
             while True:
