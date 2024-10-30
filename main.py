@@ -31,13 +31,13 @@ class Game:
         then have the computer choose a character at random
         It should randomly select a player to go first"""
         print("Hello and welcome")
-        puppaydog = Player("Puppay", "Tornadotwisty", "PuppayDog Eyes", 100, move_list =
+        self.puppaydog = Player("Puppay", "Tornadotwisty", "PuppayDog Eyes", 100, move_list =
         {
             "Puppay": {"damage": 150, "accuracy": 50},
             "Tornadotwisty": {"damage": 350, "accuracy": 20},
             "PuppayDog Eyes": {"damage": 50, "accuracy": 90}
         })
-        kittaycat = Player("cat", "the-wip", "kungfu", 100, move_list =
+        self.kittaycat = Player("cat", "the-wip", "kungfu", 100, move_list =
         {
             "cat": {"damage": 130, "accuracy": 65 },
             "The-wip": {"damage": 370, "accuracy": 7},
@@ -48,10 +48,10 @@ class Game:
         while choosing:
             choice = input("Which player would you like to be? puppaydog (a) or kittaycat (b) >>")
             if choice == "a":
-                self.player = puppaydog
+                self.player = self.puppaydog
                 choosing = False
             elif choice == "b": 
-                self.player = kittaycat
+                self.player = self.kittaycat
                 choosing = False
             else: 
                 print("Invalid response. Please pick a or b.")
@@ -60,10 +60,10 @@ class Game:
         self.player_turn = True # False will mean the computers turn
         print(self.player_turn)
 
-        if self.player == puppaydog:
-            computer = kittaycat
-        elif self.player == kittaycat:
-            computer = puppaydog
+        if self.player == self.puppaydog:
+            self.computer = self.kittaycat
+        elif self.player == self.kittaycat:
+            self.computer = self.puppaydog
         else: 
             print("Error")
  
@@ -72,7 +72,13 @@ class Game:
         and allow the player to select a move to use on the opponent
         If it is the computer player's turn, it should select a move at random"""
         if self.player_turn:
-            move = input("Pick your attack")
+            if self.player == self.puppaydog: 
+                move = input("Pick your attack: Puppay (a), Tornadotwisty (b), or PuppayDog Eyes (c) >> ")
+                if move == "Puppay":
+                    #self.computer.hp -= self.move_list["Puppay"]["damage"]
+                    #print(self.computer.hp)
+            elif self.player == self.kittaycat:
+                move = input("Pick your attack: cat (a), The-wip (b), or kunfu (c) >>")
             if move == "quit":
                 self.exit()
             elif move == "r":
