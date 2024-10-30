@@ -58,7 +58,7 @@ class Game:
             
 
         self.player_turn = True # False will mean the computers turn
-        print(self.current_turn)
+        print(self.player_turn)
 
         if self.player == puppaydog:
             computer = kittaycat
@@ -67,7 +67,7 @@ class Game:
         else: 
             print("Error")
  
-    def turn(self, current_turn):
+    def turn(self):
         """This method should show the current health of both players,
         and allow the player to select a move to use on the opponent
         If it is the computer player's turn, it should select a move at random"""
