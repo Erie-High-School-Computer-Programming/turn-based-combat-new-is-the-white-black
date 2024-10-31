@@ -32,17 +32,17 @@ class Game:
         then have the computer choose a character at random
         It should randomly select a player to go first"""
         print("Hello and welcome")
-        self.puppaydog = Player("Puppay", "Tornadotwisty", "PuppayDog Eyes", 1000, move_list =
+        self.puppaydog = Player("Puppaydog", "Tornadotwisty", "PuppayDog Eyes", 1000, move_list =
         {
             "Puppay": {"damage": 150, "accuracy": 50},
             "Tornadotwisty": {"damage": 350, "accuracy": 20},
             "PuppayDog Eyes": {"damage": 50, "accuracy": 90}
         })
-        self.kittaycat = Player("cat", "the-wip", "kungfu", 1000, move_list =
+        self.kittaycat = Player("Kittaycat", "The-wip", "Kungfu", 1000, move_list =
         {
-            "cat": {"damage": 130, "accuracy": 65 },
+            "Cat": {"damage": 130, "accuracy": 65 },
             "The-wip": {"damage": 370, "accuracy": 7},
-            "kungfu": {"damage": 75, "accuracy": 80}
+            "Kungfu": {"damage": 75, "accuracy": 80}
         })
  
         choosing = True
@@ -64,8 +64,9 @@ class Game:
         """This method should show the current health of both players,
         and allow the player to select a move to use on the opponent
         If it is the computer player's turn, it should select a move at random"""
-        print(f"{self.player.name}'s health: {self.player.hp} | {self.computer.name}'s health: {self.computer.hp}")
+        print(f"\n{self.player.name}'s health: {self.player.hp} | {self.computer.name}'s health: {self.computer.hp}")
         if self.player_turn:
+            print("-----Player Turn -----\n")
             if self.player == self.puppaydog: 
                 move = input("Pick your attack: Puppay (a), Tornadotwisty (b), or PuppayDog Eyes (c) >> ")
                 if move == "a":
@@ -78,13 +79,28 @@ class Game:
                     self.exit()
                 else:
                     print("Invalid move. Try again.")
-                    return
+                    return                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
                 self.attack(self.player, self.computer, move_name)
-            else:
-                move_name = random.choice(list(self.computer.move_list.keys()))
-                self.attack(self.computer, self.player, move_name)
+            elif self.player == self.kittaycat:
+                move = input("Pick your attack: Cat (a), The-wip (b), or Kungfu (c) >> ")
+                if move == "a":
+                    move_name = "Cat"
+                elif move == "b":
+                    move_name = "The-wip"
+                elif move == "c":
+                    move_name = "Kungfu"
+                elif move == "quit":
+                    self.exit()
+                else:
+                    print("Invalid move. Try again.")
+                    return                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
+                self.attack(self.player, self.computer, move_name)
+        else:
+            print("-----Computer Turn -----\n")
+            move_name = random.choice(list(self.computer.move_list.keys()))
+            self.attack(self.computer, self.player, move_name)
 
-            self.player_turn = not self.player_turn
+        self.player_turn = not self.player_turn
 
     def attack(self, attacker, defender, move_name):
         move = attacker.move_list[move_name]
